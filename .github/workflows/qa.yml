@@ -42,5 +42,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           file: "app/build/outputs/apk/qa/debug/qa-debug-*.apk"
-          tags: true
+          overwrite: true
           draft: true
