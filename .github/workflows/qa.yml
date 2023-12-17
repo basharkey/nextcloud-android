@@ -43,4 +43,7 @@ jobs:
         with:
           file: "app/build/outputs/apk/qa/debug/qa-debug-*.apk"
           overwrite: true
-          draft: true
+          branches: "run-workflows"
+          verbose: true
+          prerelease: true
+          default_release_name: "Test release"
