@@ -61,10 +61,8 @@ jobs:
 
             Please note that files only stay for around 90 days!
 
-            | Name      | Link
-            --------------------------------------------------------------------
-            | Commit    | ${{ env.HEAD_SHA }}
-
-            | Logs      | ${{ env.JOB_PATH }}
-
-            | APK Files | ${{ env. ARTIFACT_URL }}
+            | Name | Link |
+            |------|------|
+            | Commit | ${{ env.HEAD_SHA }} |
+            | Build Log | ${{ env.JOB_PATH }} |
+            | APK File (Requires OAuth) | ${{ env. ARTIFACT_URL }} |
