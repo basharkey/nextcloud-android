@@ -90,4 +90,3 @@ If you need assistance or want to ask a question about the Android app, you are 
 ## Remarks :scroll:
 
 Google Play and the Google Play logo are trademarks of Google Inc.
-
