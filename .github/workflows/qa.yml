@@ -36,13 +36,10 @@ jobs:
           sed -i "/qa/,/\}/ s/versionName .*/versionName \"${{github.event.number}}\"/" app/build.gradle
           ./gradlew assembleQaDebug
 
-      - name: Upload release assets
-        uses: xresloader/upload-to-github-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+      - name: Upload Artifact
+        id: upload
+        uses: actions/upload-artifact@v3
         with:
-          file: "app/build/outputs/apk/qa/debug/qa-debug-*.apk"
-          overwrite: true
-          verbose: true
-          prerelease: true
-          default_release_name: "Test release"
+          name: qa-debug-apk
+          path: "app/build/outputs/apk/qa/debug/qa-debug-*.apk"
+          if-no-files-found: error
